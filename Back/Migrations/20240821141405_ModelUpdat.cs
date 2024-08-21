@@ -4,7 +4,7 @@
 
 namespace Back.Migrations
 {
-    public partial class ModelsCreated : Migration
+    public partial class ModelUpdat : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

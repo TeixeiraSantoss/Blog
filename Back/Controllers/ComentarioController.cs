@@ -24,28 +24,28 @@ public class ComentarioController: ControllerBase
     {
         try
         {
-            // Verifica se já existe uma postagem com o mesmo ID
-            ComentarioModel? comentarioExistente = _ctx.Comentarios.FirstOrDefault(p => p.id == comentario.id);
-
-            if (comentarioExistente != null)
+            // Verifica se a postagem existe
+            var postagem = _ctx.Postagens.FirstOrDefault(p => p.id == comentario.PostagemId);
+            
+            if (postagem == null)
             {
-                return BadRequest("Uma postagem com o mesmo ID já existe.");
+                return NotFound("A postagem não foi encontrada.");
             }
 
-            // Adiciona a nova postagem ao banco de dados
-            ComentarioModel novaPostagem = new ComentarioModel
-            {
-                conteudo = comentario.conteudo
-            };
+            // Adiciona o comentário ao contexto
+            // ComentarioModel novoComentario = new ComentarioModel
+            // {
+            //     conteudo = comentario.conteudo
+            // };
 
-            _ctx.Comentarios.Add(novaPostagem);
+            _ctx.Comentarios.Add(comentario);
             _ctx.SaveChanges();
 
-            return Created("Postagem criada com sucesso", novaPostagem);
+            return Created("Comentario adicionado com sucesso", comentario);
         }
         catch (Exception e)
         {
-            return BadRequest(e);
+            return BadRequest($"Erro ao adicionar comentário: {e.Message}");
         }
     }
 
@@ -76,7 +76,30 @@ public class ComentarioController: ControllerBase
     //
     //Alterar Inicio
 
+    [HttpPost("alterar/{id}")]
+    public IActionResult Alterar([FromRoute] int id, [FromBody] ComentarioModel comentaio)
+    {
+        try
+        {
+            ComentarioModel comentaioExistente = _ctx.Comentarios.Find(id);
 
+            if(comentaioExistente != null)
+            {
+                comentaioExistente.conteudo = comentaio.conteudo;
+
+                _ctx.Comentarios.Update(comentaioExistente);
+                _ctx.SaveChanges();
+
+                return Ok("Comentario alterado com sucesso");
+            }
+
+            return NotFound("Nenhum comentario encontrado");
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e);
+        }
+    }
 
     //Alterar Fim
     //
@@ -84,7 +107,28 @@ public class ComentarioController: ControllerBase
     //
     //Excluir Inicio
 
+    [HttpDelete("excluir/{id}")]
+    public IActionResult Excluir([FromRoute] int id)
+    {
+        try
+        {
+            ComentarioModel comentarioExistente = _ctx.Comentarios.Find(id);
 
+            if(comentarioExistente != null)
+            {
+                _ctx.Comentarios.Remove(comentarioExistente);
+                _ctx.SaveChanges();
+
+                return Ok("Comentario excluido com sucesso");
+            }
+
+            return NotFound("Nenhum comentario encontrado");
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e);
+        }
+    }
 
     //Excluir Fim
     //

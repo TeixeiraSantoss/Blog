@@ -1,5 +1,6 @@
 using Back.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Back.Controllers;
 
@@ -63,7 +64,7 @@ public class PostagemController: ControllerBase
         try
         {
             //Criar uma lista de postagens que vai receber todas as postagens salvas no Banco
-            List<PostagemModel> postagens = _ctx.Postagens.ToList();
+            List<PostagemModel> postagens = _ctx.Postagens.Include(p => p.Comentarios).ToList();
 
             //Retornar a lista como resposta para a requisição
             return postagens.Count == 0 ? NotFound("Nenhuma postagem encontrada") : Ok(postagens);

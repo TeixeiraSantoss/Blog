@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace Back.Models;
 public class ComentarioModel
 {
@@ -6,5 +8,6 @@ public class ComentarioModel
 
     //Chave estrangeira para Postagem
     public int PostagemId { get; set; }
-    public PostagemModel Postagem { get; set; }
+    [JsonIgnore]
+    public PostagemModel? Postagem { get; set; }
 }
