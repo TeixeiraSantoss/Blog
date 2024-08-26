@@ -12,6 +12,7 @@ import { ListarComentarioComponent } from './pages/Comentario/listar-comentario/
 import { ListarPostagemComponent } from './pages/Postagem/listar-postagem/listar-postagem.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { SaibaMaisComponent } from './pages/Postagem/saiba-mais/saiba-mais.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     CadastrarPostagemComponent,
     CadastrarComentarioComponent,
     ListarComentarioComponent,
-    ListarPostagemComponent
+    ListarPostagemComponent,
+    SaibaMaisComponent
   ],
   imports: [
     BrowserModule,

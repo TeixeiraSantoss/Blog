@@ -1,0 +1,21 @@
+<div>
+    <div class="mb-3">
+        <label class="form-label text-center w-100">Titulo:</label>
+        <input type="text" class="form-control w-50 mx-auto" placeholder="Digite o titulo da sua publicação" [(ngModel)]="titulo">
+      </div>
+    <div class="mb-3">        
+        <label for="exampleFormControlTextarea1" class="form-label text-center w-100">Conteúdo:</label>
+        <textarea class="form-control w-50 mx-auto" id="exampleFormControlTextarea1" rows="3" placeholder="Digite aqui oque você deseja compartilar :]" [(ngModel)]="conteudo"></textarea>
+    </div>
+    <div class="container mt-4">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="card mb-3" *ngFor="let c of comentariosFiltrados">
+              <div class="card-body">
+                <h5 class="card-title">{{ c.conteudo }}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

@@ -1,1 +1,13 @@
-<p>listar-postagem works!</p>
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="card mb-3" *ngFor="let post of postagens">
+          <div class="card-body">
+            <h5 class="card-title">{{ post.titulo }}</h5>
+            <p class="card-text">{{ post.conteudo }}</p>
+            <button routerLink="/pages/postagem/buscar/{{post.id}}" class="btn btn-primary">Ler mais</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

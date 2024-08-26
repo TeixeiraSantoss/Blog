@@ -74,6 +74,32 @@ public class ComentarioController: ControllerBase
     //
     
     //
+    //Buscar Inicio
+
+    [HttpGet("buscar/{id}")]
+    public IActionResult Buscar([FromRoute] int id)
+    {
+        try
+        {
+            PostagemModel? postagemCadastrada = _ctx.Postagens.Find(id);
+
+            if(postagemCadastrada == null)
+            {
+                return NotFound("Nenhuma postagem encontrada");
+            }    
+
+            return Ok(postagemCadastrada);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e);
+        }
+    }
+
+    //Buscar Fim
+    //
+
+    //
     //Alterar Inicio
 
     [HttpPost("alterar/{id}")]

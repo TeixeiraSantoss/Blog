@@ -1,2 +1,29 @@
-<app-cadastrar-postagem></app-cadastrar-postagem>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Meu Blog</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <!-- <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/']">Home</a>
+            </li> -->
+            <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/pages/postagem/listar']">Postagens</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/pages/postagem/cadastrar']">Criar Postagem</a>
+            </li>
+            <!-- <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/pages/comentario']">Comentários</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/pages/postagem/buscar', 1]">Buscar Postagem</a>
+            </li> -->
+        </ul>
+        </div>
+    </div>
+</nav>
+
 <router-outlet></router-outlet>
