@@ -1,21 +1,33 @@
 <div>
     <div class="mb-3">
         <label class="form-label text-center w-100">Titulo:</label>
-        <input type="text" class="form-control w-50 mx-auto" placeholder="Digite o titulo da sua publicação" [(ngModel)]="titulo">
+        <input type="text" class="form-control w-50 mx-auto" readonly placeholder="Digite o titulo da sua publicação" [(ngModel)]="titulo">
       </div>
     <div class="mb-3">        
         <label for="exampleFormControlTextarea1" class="form-label text-center w-100">Conteúdo:</label>
-        <textarea class="form-control w-50 mx-auto" id="exampleFormControlTextarea1" rows="3" placeholder="Digite aqui oque você deseja compartilar :]" [(ngModel)]="conteudo"></textarea>
+        <textarea class="form-control w-50 mx-auto" id="exampleFormControlTextarea1" rows="3" readonly placeholder="Digite aqui oque você deseja compartilar :]" [(ngModel)]="conteudo"></textarea>
     </div>
-    <div class="container mt-4">
-        <div class="row">
-          <div class="col-md-8 offset-md-2">
-            <div class="card mb-3" *ngFor="let c of comentariosFiltrados">
-              <div class="card-body">
-                <h5 class="card-title">{{ c.conteudo }}</h5>
-              </div>
-            </div>
+    <!-- Botão "Mostrar Mais" -->
+  <div class="text-center mt-3">
+    <button
+      class="btn btn-link"
+      (click)="mostrarComentarios = !mostrarComentarios"
+    >
+      {{ mostrarComentarios ? 'Mostrar menos' : 'Mostrar comentarios' }}
+    </button>
+  </div>
+
+  <!-- Comentários -->
+  <div class="container mt-4" *ngIf="mostrarComentarios">
+    <div class="row">
+      <p class="col-md-8 offset-md-2">Comentarios:</p>
+      <div class="col-md-8 offset-md-2">
+        <div class="card mb-3" *ngFor="let c of comentariosFiltrados">
+          <div class="card-body">
+            <h5 class="card-title">{{ c.conteudo }}</h5>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 </div>

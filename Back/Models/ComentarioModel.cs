@@ -7,7 +7,7 @@ public class ComentarioModel
     public string conteudo { get; set; }
 
     //Chave estrangeira para Postagem
-    public int PostagemId { get; set; }
+    public int postagemId { get; set; }
     [JsonIgnore]
     public PostagemModel? Postagem { get; set; }
 }

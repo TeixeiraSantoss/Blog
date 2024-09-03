@@ -5,7 +5,8 @@
           <div class="card-body">
             <h5 class="card-title">{{ post.titulo }}</h5>
             <p class="card-text">{{ post.conteudo }}</p>
-            <button routerLink="/pages/postagem/buscar/{{post.id}}" class="btn btn-primary">Ler mais</button>
+            <button routerLink="/pages/postagem/buscar/{{post.id}}" class="btn btn-outline-dark btn-sm m-2">Ler mais</button>
+            <button routerLink="/pages/postagem/alterar/{{post.id}}" class="btn btn-outline-dark btn-sm m-2">Alterar</button>
           </div>
         </div>
       </div>

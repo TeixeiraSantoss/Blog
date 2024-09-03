@@ -4,5 +4,5 @@ export interface ComentarioModel
 {
     in: number;
     conteudo: string;
-    PostagemId: number;
+    postagemId: number;
 }

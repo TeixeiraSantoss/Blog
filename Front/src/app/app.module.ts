@@ -13,6 +13,7 @@ import { ListarPostagemComponent } from './pages/Postagem/listar-postagem/listar
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { SaibaMaisComponent } from './pages/Postagem/saiba-mais/saiba-mais.component';
+import { AlterarPostagemComponent } from './pages/Postagem/alterar-postagem/alterar-postagem.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SaibaMaisComponent } from './pages/Postagem/saiba-mais/saiba-mais.compo
     CadastrarComentarioComponent,
     ListarComentarioComponent,
     ListarPostagemComponent,
-    SaibaMaisComponent
+    SaibaMaisComponent,
+    AlterarPostagemComponent
   ],
   imports: [
     BrowserModule,

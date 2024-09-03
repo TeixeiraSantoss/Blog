@@ -25,7 +25,7 @@ public class ComentarioController: ControllerBase
         try
         {
             // Verifica se a postagem existe
-            var postagem = _ctx.Postagens.FirstOrDefault(p => p.id == comentario.PostagemId);
+            var postagem = _ctx.Postagens.FirstOrDefault(p => p.id == comentario.postagemId);
             
             if (postagem == null)
             {
