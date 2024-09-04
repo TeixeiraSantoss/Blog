@@ -64,4 +64,20 @@ export class AlterarPostagemComponent {
           }
       })
   }
+
+  deletar(): void
+  {
+    this.client.delete
+      (`https://localhost:7130/api/postagem/excluir/${this.routeId}`).subscribe
+      ({
+        next: () =>
+          {
+            console.log("Postagem excluida")
+          },
+        error: (erro) =>
+          {
+            console.log(erro)
+          }
+      })
+  }
 }

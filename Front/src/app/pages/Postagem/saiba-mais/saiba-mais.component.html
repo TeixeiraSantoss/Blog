@@ -7,6 +7,24 @@
         <label for="exampleFormControlTextarea1" class="form-label text-center w-100">Conteúdo:</label>
         <textarea class="form-control w-50 mx-auto" id="exampleFormControlTextarea1" rows="3" readonly placeholder="Digite aqui oque você deseja compartilar :]" [(ngModel)]="conteudo"></textarea>
     </div>
+
+  <!-- Barra de Comentários -->
+  <div class="mb-3">
+    <label class="form-label text-center w-100">Comente aqui:</label>
+    <textarea
+      class="form-control w-50 mx-auto"
+      id="comentarioInput"
+      rows="2"
+      placeholder="Escreva seu comentário"
+      [(ngModel)]="conteudoComentario"
+    ></textarea>
+    <div class="text-center mt-2">
+      <button class="btn btn-outline-dark btn-sm m-2" (click)="cadastrarComentario()">
+        Comentar
+      </button>
+    </div>
+  </div>
+
     <!-- Botão "Mostrar Mais" -->
   <div class="text-center mt-3">
     <button
@@ -23,7 +41,7 @@
       <p class="col-md-8 offset-md-2">Comentarios:</p>
       <div class="col-md-8 offset-md-2">
         <div class="card mb-3" *ngFor="let c of comentariosFiltrados">
-          <div class="card-body">
+          <div class="card-body text-center">
             <h5 class="card-title">{{ c.conteudo }}</h5>
           </div>
         </div>

@@ -2,7 +2,7 @@ import { PostagemModel } from "./postagem.model";
 
 export interface ComentarioModel
 {
-    in: number;
+    id: number;
     conteudo: string;
     postagemId: number;
 }

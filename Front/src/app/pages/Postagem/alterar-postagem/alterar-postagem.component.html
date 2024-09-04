@@ -8,7 +8,10 @@
         <textarea class="form-control w-50 mx-auto" id="exampleFormControlTextarea1" rows="3" placeholder="Digite aqui oque você deseja compartilar :]" [(ngModel)]="conteudo"></textarea>
     </div>
     <div class="form-text text-center w-100">
-        <button type="button" class="btn btn-outline-dark btn-sm m-2" (click)="alterar()" routerLink="/pages/postagem/listar">alterar</button>
+        <button type="button" class="btn btn-outline-dark btn-sm m-2" (click)="alterar()">alterar</button>
         <button type="button" class="btn btn-outline-dark btn-sm m-2" routerLink="/pages/postagem/listar">Cancelar</button>
+    </div>
+    <div class="form-text text-center w-100">
+        <button type="button" class="btn btn-outline-danger btn-sm m-2" (click)="deletar()" routerLink="/pages/postagem/listar">DELETAR</button>
     </div>
 </div>
