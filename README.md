@@ -46,7 +46,7 @@ Navegue até o diretório onde deseja clonar o repositório.
 Use o comando para clonar o repositório:
 
 ```bash
-git clone https://github.com/TeixeiraSantoss/BlogManager
+git clone https://github.com/TeixeiraSantoss/Blog
 ```
 
 ### Passo 2: Configurar o Backend
@@ -54,7 +54,7 @@ git clone https://github.com/TeixeiraSantoss/BlogManager
 1. Navegue até o diretório do backend:
 
 ```bash
-cd ./BlogManager/Backend
+cd ./Blog/Back
 ```
 
 2. Restaure os pacotes NuGet:
@@ -82,7 +82,7 @@ dotnet run
 1. Abra um novo terminal e navegue até o diretório do frontend:
 
 ```bash
-cd ./BlogManager/Frontend
+cd ./Blog/Front
 ```
 
 2. Instale as dependências do Angular:
