@@ -20,11 +20,6 @@ Este projeto é uma aplicação web de gerenciamento de um blog, permitindo que 
 - **TypeScript**: Linguagem utilizada no frontend para adicionar tipagem estática e melhorar o desenvolvimento de componentes do Angular.
 - **Bootstrap**: Framework CSS utilizado para estilização da interface e para garantir que ela seja responsiva.
 - **NgModel (Angular Forms)**: Utilizado para o binding de dados nos formulários da aplicação.
-  
-### Autenticação e Autorização
-
-- **Guards no Angular**: Utilizados para proteger as rotas, garantindo que apenas usuários autorizados tenham acesso a determinadas partes da aplicação.
-- **AuthService**: Serviço personalizado para gerenciar a autenticação e autorização dos usuários, controlando o acesso às funcionalidades do blog.
 
 ### Funcionalidades
 
@@ -33,7 +28,6 @@ Este projeto é uma aplicação web de gerenciamento de um blog, permitindo que 
 3. **Edição de Postagens**: Os usuários podem alterar o conteúdo de suas postagens.
 4. **Exclusão de Postagens**: Remove postagens do blog.
 5. **Comentários**: Funcionalidade para adicionar, listar e filtrar comentários nas postagens, em um estilo semelhante ao de redes sociais.
-6. **Níveis de Acesso**: Diferentes funcionalidades disponíveis para usuários comuns e administradores.
 
 ## Como Rodar o Projeto?
 
