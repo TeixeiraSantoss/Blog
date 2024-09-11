@@ -1,6 +1,3 @@
-Aqui está o texto adaptado em um formato que o GitHub suporta, utilizando markdown:
-
-```markdown
 # Blog Manager Application
 
 ## Sobre o Projeto
@@ -78,7 +75,7 @@ dotnet ef database update
 dotnet run
 ```
 
-(O backend estará disponível em `https://localhost:5001` por padrão.)
+(O backend estará disponível em https://localhost:5001 por padrão.)
 
 ### Passo 3: Configurar o Frontend
 
@@ -100,11 +97,11 @@ npm install
 ng serve -o
 ```
 
-(O frontend estará disponível em `http://localhost:4200`.)
+(O frontend estará disponível em http://localhost:4200.)
 
 ### Passo 4: Acessar a Aplicação
 
-Abra o navegador e acesse `http://localhost:4200`.
+Abra o navegador e acesse http://localhost:4200.
 
 Realize o login com as credenciais fornecidas para acessar as funcionalidades do blog.
 
@@ -114,6 +111,3 @@ Realize o login com as credenciais fornecidas para acessar as funcionalidades do
 2. Para parar o backend: No terminal onde está rodando o backend, pressione **Ctrl + C**.
 
 Seguindo estes passos, você terá o projeto rodando localmente e poderá interagir com as funcionalidades do blog.
-```
-
-Basta copiar esse texto em markdown e colar no arquivo `README.md` do seu projeto no GitHub.
